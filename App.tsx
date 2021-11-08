@@ -1,8 +1,12 @@
 import React from 'react';
+import { Provider } from 'react-redux';
 import { RootNavigator } from './navigations/RootNavigator';
+import { store } from './store'
 
 export default function App() {
   return (
-    <RootNavigator />
-  );
+    <Provider store={store}>
+      <RootNavigator />
+    </Provider>
+  )
 }
